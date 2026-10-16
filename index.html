@@ -1,0 +1,275 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>একটি ছোট্ট সারপ্রাইজ ❤️</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: system-ui, sans-serif;
+  text-align: center;
+  color: #fff5f7;
+  background: linear-gradient(145deg, #260817, #791c43, #200918);
+  overflow-x: hidden;
+}
+
+main {
+  padding: 35px 18px 55px;
+  max-width: 520px;
+  margin: auto;
+}
+
+h1 { color: #ffd5e3; }
+p { line-height: 1.9; }
+
+button {
+  border: 0;
+  border-radius: 25px;
+  padding: 13px 22px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #6c1237;
+  background: #ffe2ec;
+  font-weight: bold;
+}
+
+.gift-area {
+  margin: 45px auto 25px;
+  width: 190px;
+  height: 175px;
+  position: relative;
+  cursor: pointer;
+  animation: float 2s ease-in-out infinite;
+}
+
+.box {
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+  width: 160px;
+  height: 105px;
+  border-radius: 8px;
+  background: #f04479;
+  box-shadow: 0 12px 35px #0005;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  left: 64px;
+  height: 100%;
+  width: 30px;
+  background: #ffd56c;
+}
+
+.lid {
+  position: absolute;
+  z-index: 2;
+  top: 45px;
+  left: 5px;
+  width: 180px;
+  height: 38px;
+  border-radius: 8px;
+  background: #ff6694;
+  transition: transform 1s ease;
+}
+
+.lid::before {
+  content: "🎀";
+  position: absolute;
+  font-size: 39px;
+  top: -30px;
+  left: 68px;
+}
+
+.gift-area.open .lid {
+  transform: translate(25px, -75px) rotate(25deg);
+}
+
+.gift-area.open {
+  animation: none;
+}
+
+.hint { color: #ffd8e5; }
+
+#surprise {
+  display: none;
+  margin-top: 30px;
+  animation: appear 1s ease;
+}
+
+#surprise.show { display: block; }
+
+.photo {
+  width: min(100%, 270px);
+  max-height: 340px;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 3px solid #ffd3e2;
+  box-shadow: 0 5px 25px #0005;
+}
+
+.letter {
+  margin-top: 20px;
+  padding: 22px;
+  background: #fff0f4;
+  color: #75193e;
+  border-radius: 18px;
+  text-align: left;
+  white-space: pre-line;
+}
+
+.heart {
+  position: fixed;
+  bottom: -30px;
+  pointer-events: none;
+  animation: rise 5s linear forwards;
+  z-index: 5;
+}
+
+@keyframes float {
+  50% { transform: translateY(-10px); }
+}
+@keyframes appear {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes rise {
+  to { transform: translateY(-110vh) rotate(25deg); opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+<main>
+  <div style="font-size:42px">🎂 💗 🎂</div>
+
+  <h1>শুভ জন্মদিন, আমার প্রিয়! ❤️</h1>
+
+  <p>
+    তোমার জন্য একটা ছোট্ট সারপ্রাইজ আছে।
+    <br>তুমি কি তোমার গিফট খুলতে প্রস্তুত?
+  </p>
+
+  <div class="gift-area" id="gift"
+       role="button" tabindex="0"
+       aria-label="গিফট বক্স খোলো">
+    <div class="box"></div>
+    <div class="lid"></div>
+  </div>
+
+  <p class="hint" id="hint">🎁 গিফট বক্সে ট্যাপ করো 🎁</p>
+
+  <button id="openBtn">Open Your Gift 💝</button>
+
+  <section id="surprise">
+    <h1>তোমার জন্য অনেক ভালোবাসা! 💖</h1>
+
+    <img class="photo"
+         src="photo.jpg"
+         alt="আমার প্রিয় মানুষের ছবি"
+         onerror="this.style.display='none'">
+
+    <div class="letter">
+      <strong>আমার প্রিয় মানুষ, ❤️</strong>
+
+      শুভ জন্মদিন, আমার জান! 🎂
+
+      তোমার জীবনের প্রতিটি দিন আনন্দ,
+      শান্তি আর ভালোবাসায় ভরে উঠুক।
+      তোমার মুখের হাসিটা সবসময় অটুট থাকুক।
+
+      তুমি আমার কাছে ভীষণ স্পেশাল।
+      তোমার সব সুন্দর স্বপ্ন পূরণ হোক।
+      তোমার বিশেষ দিনে তোমাকে জানাই
+      পৃথিবীর সবটুকু ভালোবাসা।
+
+      আজকের এই ছোট্ট উপহারটা শুধু তোমার জন্য।
+      সবসময় ভালো থেকো, আমার প্রিয়। 💗
+
+      অনেক অনেক ভালোবাসি তোমাকে। ❤️
+
+      — তোমার প্রিয় মানুষ
+    </div>
+
+    <p style="font-size:25px">
+      🎉 🎂 💕 🎉
+    </p>
+  </section>
+
+  <audio id="music" src="music.mp3" loop></audio>
+
+  <button id="musicBtn" style="margin-top:12px">
+    🎵 গান চালু করো
+  </button>
+</main>
+
+<script>
+const gift = document.getElementById("gift");
+const openBtn = document.getElementById("openBtn");
+const surprise = document.getElementById("surprise");
+const hint = document.getElementById("hint");
+const music = document.getElementById("music");
+const musicBtn = document.getElementById("musicBtn");
+
+async function playMusic() {
+  try {
+    await music.play();
+    musicBtn.textContent = "⏸️ গান বন্ধ করো";
+  } catch (e) {
+    musicBtn.textContent = "🎵 আবার গান চালু করো";
+  }
+}
+
+function openGift() {
+  gift.classList.add("open");
+  surprise.classList.add("show");
+  hint.textContent = "তোমার জন্য অনেক ভালোবাসা ❤️";
+  openBtn.textContent = "তোমাকে অনেক ভালোবাসি 💖";
+  playMusic();
+  hearts();
+}
+
+gift.addEventListener("click", openGift);
+openBtn.addEventListener("click", openGift);
+
+gift.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" || e.key === " ") {
+    e.preventDefault();
+    openGift();
+  }
+});
+
+musicBtn.addEventListener("click", async () => {
+  if (music.paused) {
+    await playMusic();
+  } else {
+    music.pause();
+    musicBtn.textContent = "🎵 গান চালু করো";
+  }
+});
+
+function hearts() {
+  for (let i = 0; i < 18; i++) {
+    setTimeout(() => {
+      const heart = document.createElement("span");
+      heart.className = "heart";
+      heart.textContent = ["❤️", "💗", "💕", "✨"][
+        Math.floor(Math.random() * 4)
+      ];
+      heart.style.left = Math.random() * 95 + "vw";
+      heart.style.fontSize = 18 + Math.random() * 20 + "px";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5200);
+    }, i * 130);
+  }
+}
+</script>
+</body>
+</html>
